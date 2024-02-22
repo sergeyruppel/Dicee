@@ -1,19 +1,42 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MainApp());
+  return runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+          title: const Text('Dicee'),
+          foregroundColor: Colors.white,
+          backgroundColor: Colors.black,
+        ),
+        body: const DicePage(),
+      ),
+    ),
+  );
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class DicePage extends StatelessWidget {
+  const DicePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return Center(
+      child: Row(
+        children: [
+          Expanded(
+            child: TextButton(
+              onPressed: () {},
+              child: Image.asset('images/dice1.png'),
+            ),
+          ),
+          Expanded(
+            child: TextButton(
+              onPressed: () {},
+              child: Image.asset('images/dice4.png'),
+            ),
+          )
+        ],
       ),
     );
   }
