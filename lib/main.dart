@@ -10,14 +10,15 @@ void main() {
           foregroundColor: Colors.white,
           backgroundColor: Colors.black,
         ),
-        body: const DicePage(),
+        body: DicePage(),
       ),
     ),
   );
 }
 
 class DicePage extends StatelessWidget {
-  const DicePage({super.key});
+  DicePage({super.key});
+  var leftDiceNumber = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +27,10 @@ class DicePage extends StatelessWidget {
         children: [
           Expanded(
             child: TextButton(
-              onPressed: () {},
-              child: Image.asset('images/dice1.png'),
+              onPressed: () {
+                print('hi');
+              },
+              child: Image.asset('images/dice$leftDiceNumber.png'),
             ),
           ),
           Expanded(
