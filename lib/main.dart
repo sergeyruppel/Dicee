@@ -10,18 +10,19 @@ void main() {
           foregroundColor: Colors.white,
           backgroundColor: Colors.black,
         ),
-        body: DicePage(),
+        body: const DicePage(),
       ),
     ),
   );
 }
 
 class DicePage extends StatelessWidget {
-  DicePage({super.key});
-  var leftDiceNumber = 1;
+  const DicePage({super.key});
+  int leftDiceNumber;
 
   @override
   Widget build(BuildContext context) {
+    leftDiceNumber = 3;
     return Center(
       child: Row(
         children: [
